@@ -1,8 +1,16 @@
 
 <h1 class="text-center mt-4">Listing all Articles</h1><br>
 
-<%= render 'article' %>
+<div class="flickr_pagination">
+    <%= will_paginate @articles, :container => false %>
+  </div>
+  
+  <%= render 'article' %>
 <br>
+<div class="flickr_pagination">
+    <%= will_paginate @articles, :container => false %>
+  </div>
+  <br>
 <p>
   <%= link_to 'Create new article', new_article_path %>
 </p>
